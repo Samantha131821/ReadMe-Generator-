@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const util = require('util');
 const createMarkdown = require('./utils/createMarkdown')
 
 
@@ -8,7 +9,6 @@ inquirer
         {
             type: 'input',
             message: 'Title of Project',
-            default: 'Title:',
             name: 'title',
         },
         {
@@ -16,15 +16,21 @@ inquirer
             message: 'Description of project',
             name: 'description',
         },
-        {
-            type: 'input',
-            message: 'Installation Instructions',
-            name: 'installation',
+          {
+            type: 'list',
+            message: 'Choose a License',
+            choices: ['GNU_AGPLv3', 'GNU_GPLv3', 'GNU_LGPLv3', 'Mozilla_Public_License_2.0', 'Apache_License_2.0', 'MIT_License', 'Boost_1.0', 'Unlicense'],
+            name: 'license',
         },
         {
             type: 'input',
             message: 'Usage Information',
             name: 'usage',
+        },
+        {
+            type: 'input',
+            message: 'Installation Instructions',
+            name: 'installation',
         },
         {
             type: 'input',
@@ -36,45 +42,11 @@ inquirer
             message: 'Test Instructions',
             name: 'test',
         },
-        {
-            type: 'list',
-            message: 'Choose a License',
-            choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
-            name: 'license',
-        },
+    
     ])
-    .then((answers) =>{
-        const {title, description, installation, usage, contribution, test, license} = answers;
+    .then((data) =>{
 
-        const readmeMD = `
-        
-# ${title},
-\r\n
-\r\n
-\r\n
-### ${license}
-\r\n
-\r\n
-### ${description}
-\r\n
-\r\n
-### ${installation}
-\r\n
-\r\n
-### ${usage}
-\r\n
-\r\n
-### ${contribution}
-\r\n
-\r\n
-### ${test}
-\r\n
-
-
-        
-        `;
-
-        fs.writeFile("ReadME.md", readmeMD, (err) => {
+        fs.writeFile("ReadME.md", createMarkdown(data), (err) => {
             if(err){
                 console.log(err);
             }
@@ -82,5 +54,5 @@ inquirer
                 console.log('Your ReadME has been created!')
             }
         })
+
     });
-    

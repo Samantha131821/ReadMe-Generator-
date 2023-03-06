@@ -19,6 +19,6 @@
   "homepage": "https://github.com/Samantha131821/ReadMe-Generator-#readme",
   "dependencies": {
     "fs": "^0.0.1-security",
-    "inquirer": "^9.1.4"
+    "inquirer": "^8.0.0"
   }
 }
