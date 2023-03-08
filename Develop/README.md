@@ -1,4 +1,4 @@
-# title
+# Title
 [![License: GNU_AGPLv3](https://img.shields.io/badge/License-GNU_AGPLv3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
 
@@ -10,17 +10,22 @@
 * [Installation](#installation)
 * [Contribution](#contribution)
 * [Tests](#tests)
+* [Questions](#questions)
 
 
 ## Description
-desp 
+Description 
 ## Usage
-usage
+Usage Information
 ## License
 GNU_AGPLv3
 ## Installation
-inst
+Instructions
 ## Contribution
-fjeds
+Guidelines
 ## Tests
-fjseof
+Test Instrucs
+## Questions
+question 1 question 2
+My GitHub: https://github.com/samantha131821  
+For additional questions, please reach out to me at my email: test@email.com 

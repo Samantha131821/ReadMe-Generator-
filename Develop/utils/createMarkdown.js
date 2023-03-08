@@ -52,6 +52,7 @@ ${licenseBadge(data.license)}
 * [Installation](#installation)
 * [Contribution](#contribution)
 * [Tests](#tests)
+* [Questions](#questions)
 
 
 ## Description
@@ -66,6 +67,10 @@ ${data.installation}
 ${data.contribution}
 ## Tests
 ${data.test}
+## Questions
+${data.questions}
+My GitHub: https://github.com/${data.github}  
+For additional questions, please reach out to me at my email: ${data.email} 
 `;
 }
 

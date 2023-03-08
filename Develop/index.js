@@ -42,6 +42,21 @@ inquirer
             message: 'Test Instructions',
             name: 'test',
         },
+        {
+            type: 'input',
+            message:"Please ask questions you may have",
+            name: 'questions',
+          },
+        {
+            type: 'input',
+            message:"Please add your github account name",
+            name: 'github',
+          },
+        {
+            type: 'input',
+            message:"Please add your email",
+            name: 'email',
+          }
     
     ])
     .then((data) =>{
